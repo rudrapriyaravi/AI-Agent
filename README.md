@@ -1,55 +1,118 @@
-# ADK Finance Assistance Agent
+ 💰 Finance Assistance Agent
 
-A simple finance assistant built with Google's Agent Development Kit (ADK),
-following the structure shown in the reference screenshot.
+An AI-powered conversational finance assistant built using **Python, Google Agent Development Kit (ADK), and Gemini 3.5 Flash Lite**. The project aims to make everyday financial information more accessible through a simple, interactive AI agent.
 
-## Project structure
+The Finance Assistance Agent helps users understand general financial concepts, organize their monthly budgets, develop saving habits, and think through their personal financial goals. It uses Google's Gemini model to understand natural-language questions and generate friendly, relevant responses.
+
+✨ Key Features
+
+- **Conversational Financial Assistance:** Answers general questions related to personal finance.
+- **Monthly Budget Planning:** Helps users understand how to organize income and expenses.
+- **Savings Guidance:** Provides general suggestions for building consistent saving habits.
+- **Financial Goal Planning:** Assists users in thinking through short-term and long-term financial goals.
+- **Natural Language Interaction:** Allows users to communicate with the agent using everyday language.
+- **AI-Powered Responses:** Uses Gemini to generate contextual responses to user queries.
+
+🛠️ Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Google ADK | AI agent development and orchestration |
+| Gemini 3.5 Flash Lite | Language model powering the assistant |
+| Google AI Studio API | Gemini API access |
+| python-dotenv | Environment variable management |
+
+🏗️ Project Structure
 
 ```text
 ADK_FINANCE_ASSISTANCE_AGENT/
+│
 ├── finance_assistance_agent/
 │   ├── __init__.py
 │   └── agent.py
+│
 ├── .env
 ├── .env.example
-├── README.md
-└── requirements.txt
+├── .gitignore
+├── requirements.txt
+└── README.md
 ```
 
-## Setup (Windows PowerShell)
+ ⚙️ Installation and Setup
 
-1. Install Python 3.10 or newer.
-2. Open this folder in VS Code.
-3. Create and activate a virtual environment:
+ 1. Clone the repository
 
-   ```powershell
-   py -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   ```
+```bash
+git clone <your-github-repository-url>
+cd ADK_FINANCE_ASSISTANCE_AGENT
+```
 
-4. Install dependencies:
+2. Create a virtual environment
 
-   ```powershell
-   python -m pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
+```bash
+python -m venv .venv
+```
 
-5. Open `.env` and replace `YOUR_GEMINI_API_KEY_HERE` with your own
-   Gemini API key. Do not share or commit this file.
+Activate it on Windows:
 
-6. From the project root, run the ADK web interface:
+```powershell
+.venv\Scripts\activate
+```
 
-   ```powershell
-   adk web
-   ```
+3. Install dependencies
 
-   Then open the local URL printed in the terminal and select
-   `finance_assistance_agent`.
+```bash
+pip install -r requirements.txt
+```
 
-## Notes
+ 4. Configure the API key
 
-- The `.venv` directory is intentionally not included: it is generated
-  locally during setup and can be very large and platform-specific.
-- The `.env` file contains a placeholder, not a working API key.
-- This assistant provides general financial education, not personalized
-  investment, tax, or legal advice.
+Create a `.env` file and add your Google Gemini API key:
+
+```env
+GOOGLE_API_KEY=your_google_api_key
+```
+
+Get your API key from [Google AI Studio](https://aistudio.google.com/apikey).
+
+5. Run the application
+
+From the parent directory containing `finance_assistance_agent`, execute:
+
+```bash
+adk web
+```
+
+Open the local URL displayed in the terminal to interact with the Finance Assistance Agent.
+
+💡 Example Queries
+
+Users can interact with the assistant using questions such as:
+
+- How can I create a monthly budget?
+- What is an emergency fund?
+- How can I develop a regular saving habit?
+- How should I plan my financial goals?
+- What are the basic financial concepts I should understand?
+
+🎯 Project Objective
+
+The primary objective of this project is to explore the development of AI-powered agents using Google's Agent Development Kit and Gemini models, while applying conversational AI to a practical personal finance use case.
+
+🔮 Future Enhancements
+
+- Expense tracking and categorization.
+- Personalized budget recommendations.
+- Integration with financial data sources.
+- Interactive financial reports and visualizations.
+- Persistent conversation and user preference management.
+
+ ⚠️ Disclaimer
+
+This project is intended for educational purposes and provides general financial information only. It does not replace professional financial, investment, tax, or legal advice.
+
+---
+
+**Built with Python, Google ADK, and Gemini AI.**
+
